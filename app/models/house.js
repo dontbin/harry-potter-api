@@ -1,16 +1,21 @@
 const mongoose = require('mongoose')
 
-const schoolSchema = new mongoose.Schema({
+const houseSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
   },
-  location: {
+  animal: {
     type: String,
     required: true
   },
-  administrator: {
+  slogan: {
     type: String,
+    required: true
+  },
+  school: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'School',
     required: true
   },
   owner: {
@@ -22,4 +27,4 @@ const schoolSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('School', schoolSchema)
+module.exports = mongoose.model('House', houseSchema)
