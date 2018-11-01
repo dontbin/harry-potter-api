@@ -13,7 +13,8 @@ curl "${API}${URL_PATH}" \
       "name": {
         "firstName": "'"${FIRSTNAME}"'",
         "lastName": "'"${LASTNAME}"'"
-      }
+      },
+      "house": "'"${HOUSE_ID}"'"
     }
   }'
 
